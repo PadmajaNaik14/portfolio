@@ -216,9 +216,10 @@
       text-transform: uppercase;
       font-size: 13px;
     }
+/* ===== resume button: small and fits only the text ===== */
 .resume-btn {
-  display: inline-block !important;   /* force inline-size */
-  width: auto !important;             /* prevents full-width stretching */
+  display: inline-block !important;   /* fit only the text */
+  width: auto !important;             /* ensure no forced width */
   padding: 6px 14px;                  /* compact size */
   background-color: #111;
   color: #fff;
@@ -228,15 +229,20 @@
   letter-spacing: 0.03em;
   transition: 0.25s ease;
   margin-top: 12px;
+
+  /* important for flex container: prevent stretching and keep to left */
+  align-self: flex-start !important;
 }
 
-
+/* hover */
 .resume-btn:hover {
   background-color: #333;
   transform: translateY(-1px);
 }
-.hero-text a.resume-btn {
-  display: inline-block !important;
+
+/* ensure no other rule forces links inside hero-text to be full-width */
+.hero-text a {
+  display: inline-block;   /* safe default for links inside hero-text */
 }
 
 
@@ -327,6 +333,7 @@
 
 </body>
 </html>
+
 
 
 
