@@ -217,17 +217,19 @@
       font-size: 13px;
     }
 .resume-btn {
-  display: inline-block;       /* prevents stretching */
-  padding: 6px 14px;           /* smaller padding */
+  display: inline-block !important;   /* force inline-size */
+  width: auto !important;             /* prevents full-width stretching */
+  padding: 6px 14px;                  /* compact size */
   background-color: #111;
   color: #fff;
-  font-size: 13px;             /* smaller text */
+  font-size: 13px;
   border-radius: 5px;
   text-decoration: none;
   letter-spacing: 0.03em;
   transition: 0.25s ease;
-  margin-top: 10px;
+  margin-top: 12px;
 }
+
 
 .resume-btn:hover {
   background-color: #333;
@@ -322,6 +324,7 @@
 
 </body>
 </html>
+
 
 
 
